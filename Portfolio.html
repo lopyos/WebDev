@@ -1,20 +1,22 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <style>
 .start{
   background-image:url("https://images.pexels.com/photos/7106/macbook-computer-clean-hero.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
   background-repeat:no-repeat;
-  background-size:100% 100%;
-  display: block;
-  height:100vh;   
+  background-size:100% 100%; 
   margin: 0; 
+  display: grid;
+  height: 100vh;
 }
 .projects{
   background-image: url("https://c.pxhere.com/photos/5a/42/blogging_business_coding_computer_data_desk_display_electronics-916562.jpg!d");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  display: block;
+  display: grid;
   height: 100vh;
   margin: 0;
   padding-top: 50px;
@@ -24,16 +26,11 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: auto;
   margin-top:200px;
   box-shadow: 0px 0px 10px 5px black;
 }
-.text{
-  text-size-adjust: inherit;
-  color:black;
-  text-align:center;
-  font-size:30px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -86,39 +83,64 @@ h1{
   background-image: url("https://static.pexels.com/photos/270662/pexels-photo-270662.jpeg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  display: block;
+  display: grid;
   height: 100vh;
   margin: 0;
 }
-
+.linkedin{
+  padding: 50px;
+  font-size: 35px;
+  border-radius: 20px;
+  background-color: rgba(201, 201, 201,0.1);
+  color:white;
+}
+.buttoncontact{
+  padding-top:350px;
+}
+.fixtop{
+    position: fixed;
+    top: 0;
+      width: 100%;
+}
+.introduction{
+    color: white;
+    background-color: rgba(57, 57, 57,0.8);
+    font-size: 20px;
+    margin-top: 50px;
+    max-width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+    padding: 50px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    box-shadow: 0px 0px 50px 10px white;
+    font-size:1vw;
+    margin-bottom: 25%;
+}
 
 </style>
-
 <html>
-
 <body>
-  <section class="start">
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
+<nav>
+      <ul class="fixtop">
         <li><a href="#news">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <li style="float:right"><a class="active" href="#about">About</a></li>
       </ul>
     </nav>
+  <div class="start" id="about">
     <div class="container">
       <div class="col-xs-4"></div>
       <div class="col-xs-4">
         <figure class="myimagef ">
           <image src="https://s14.postimg.org/62ljp7ao1/teste.jpg" class="myimage img-responsive"></image>
-          <p class="text">My name is Rafael and i would like to become a Front End Dev</p>
         </figure>
       </div>
     </div>
-  </section>
+    <p class="introduction">My name is Rafael and i would like to become a Front End Dev,I'm using FreeCodeCamp and other freely available resources to learn HTML5, CSS3, JavaScript, Node and Angular. FreeCodeCamp encourages campers to practice their skills by building projects - follow my journey here as I build my portfolio.</p>
+  </div>
   <div id ="news" class="projects">
       <h1>Projects in Progress</h1>
-
   <div class="container">
     <div class="col-xs-4">
       <button class="buttonproject">In progress</button>
@@ -145,18 +167,19 @@ h1{
   </div>
 </div>
   <div id="contact" class="contats">
-    <div class="container">
+    <div class="container buttoncontact">
       <div class="col-xs-4">
-        
+        <a href="www.linkedin.com/in/joserafaeltavares"target="_blank"class="linkedin btn"> Linkedin <i class="fa fa-linkedin-square"></i></a>
       </div>
       <div class="col-xs-4">
-
+        <button class="linkedin btn">GitHub<i class="fa fa-github"></i></button>
       </div>
       <div class="col-xs-4">
-
+        <button class="linkedin btn">CodePen<i class="fa fa-codepen"></i></button>
       </div>
     </div>
   </div>
+</div>
 </div>
 </body>
 </html>
