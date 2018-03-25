@@ -1,3 +1,4 @@
+<div class="container-fluid" style="padding:0;">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -7,23 +8,20 @@
 .start{
   background-image:url("https://images.pexels.com/photos/7106/macbook-computer-clean-hero.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
   background-repeat:no-repeat;
-  background-size:100% 100%; 
-  margin: 0; 
-  display: grid;
-  height: 100vh;
+  background-size:100% 50%; 
+  
 }
 .projects{
   background-image: url("https://c.pxhere.com/photos/5a/42/blogging_business_coding_computer_data_desk_display_electronics-916562.jpg!d");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  display: grid;
-  height: 100vh;
-  margin: 0;
   padding-top: 50px;
+  margin-top: -117px;
+  padding-bottom: 240px;
+
 }
 .myimage{
-  border-radius:50%;
-  display: block;
+  border-radius:50%;  
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
@@ -65,26 +63,20 @@ h1{
   font-family: Impact, Charcoal, sans-serif;
 }
 .buttonproject {
-  background-image: url("https://cdn.pixabay.com/photo/2017/10/26/17/51/under-2891888_960_720.jpg");
-    background-size: 100% 100%;
-    display: block;
-    background-repeat: no-repeat;
-    padding: 100px 70px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
     margin-top: 100px;
     border: 1px solid;
     box-shadow: 0px 0px 50px 10px #888888;
+    background-color: grey;
+    padding: -105px;
+    width: 55%;
+
 }
 .contats{
   background-image: url("https://static.pexels.com/photos/270662/pexels-photo-270662.jpeg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  display: grid;
-  height: 100vh;
+  padding-bottom: 450px;
   margin: 0;
 }
 .linkedin{
@@ -93,9 +85,11 @@ h1{
   border-radius: 20px;
   background-color: rgba(201, 201, 201,0.1);
   color:white;
+  
 }
 .buttoncontact{
   padding-top:350px;
+  overflow: auto;
 }
 .fixtop{
     position: fixed;
@@ -111,13 +105,38 @@ h1{
     margin-right: auto;
     margin-left: auto;
     border-radius: 20px;
-    padding: 50px;
+    padding: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 60px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     box-shadow: 0px 0px 50px 10px white;
-    font-size:1vw;
     margin-bottom: 25%;
 }
+.linkedinn{
+  width:25%; 
+  float: left;
+  margin-left: 15%
 
+}
+.guithub{
+  margin: auto;
+  float: left;
+  width: 25%;
+
+}
+.codepen{
+
+  float: left;
+  width: 25%;
+
+}
+@media screen and (max-width:850px ) {
+  .linkedinn, .guithub, .codepen {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+    margin: auto;
+    text-align: center;
+  }
+}
 </style>
 <html>
 <body>
@@ -129,53 +148,49 @@ h1{
       </ul>
     </nav>
   <div class="start" id="about">
-    <div class="container">
-      <div class="col-xs-4"></div>
-      <div class="col-xs-4">
+    <div class="container">      
         <figure class="myimagef ">
           <image src="https://s14.postimg.org/62ljp7ao1/teste.jpg" class="myimage img-responsive"></image>
-        </figure>
-      </div>
-    </div>
+        </figure>      
     <p class="introduction">My name is Rafael and i would like to become a Front End Dev,I'm using FreeCodeCamp and other freely available resources to learn HTML5, CSS3, JavaScript, Node and Angular. FreeCodeCamp encourages campers to practice their skills by building projects - follow my journey here as I build my portfolio.</p>
   </div>
   <div id ="news" class="projects">
       <h1>Projects in Progress</h1>
-  <div class="container">
-    <div class="col-xs-4">
-      <button class="buttonproject">In progress</button>
+  <div class="container-fluid">
+    <div class="linkedinn">
+      <button class="buttonproject "><img class="img-responsive" alt="inprogress" src="https://s14.postimg.org/tdb71k6y9/under-2891888_960_720.jpg" >In progress</img></button>
     </div>
-    <div class="col-xs-4">
-      <button class="buttonproject">In progress</button>
+    <div class="guithub">
+      <button class="buttonproject "><img class="img-responsive" alt="inprogress" src="https://s14.postimg.org/tdb71k6y9/under-2891888_960_720.jpg" >In progress</img></button>
     </div>
-    <div class="col-xs-4">
+    <div class="codepen">
       <figure>
-      <button class="buttonproject">In progress</button>
+      <button class="buttonproject "><img class="img-responsive" alt="inprogress" src="https://s14.postimg.org/tdb71k6y9/under-2891888_960_720.jpg" >In progress</img></button>
     </figure>
     </div>
   </div>
-  <div class="container">
-    <div class="col-xs-4">
-      <button class="buttonproject">In progress</button>
+  <div class="container-fluid">
+    <div class="linkedinn">
+      <button class="buttonproject "><img class="img-responsive" alt="inprogress" src="https://s14.postimg.org/tdb71k6y9/under-2891888_960_720.jpg" >In progress</img></button>
     </div>
-    <div class="col-xs-4">
-      <button class="buttonproject">In progress</button>
+    <div class="guithub">
+      <button class="buttonproject "><img class="img-responsive" alt="inprogress" src="https://s14.postimg.org/tdb71k6y9/under-2891888_960_720.jpg" >In progress</img></button>
     </div>
-    <div class="col-xs-4">
-      <button class="buttonproject">In progress</button>
+    <div class="codepen">
+      <button class="buttonproject "><img class="img-responsive" alt="inprogress" src="https://s14.postimg.org/tdb71k6y9/under-2891888_960_720.jpg" >In progress</img></button>
     </div>
   </div>
 </div>
-  <div id="contact" class="contats">
-    <div class="container buttoncontact">
-      <div class="col-xs-4">
-        <a href="www.linkedin.com/in/joserafaeltavares"target="_blank"class="linkedin btn"> Linkedin <i class="fa fa-linkedin-square"></i></a>
+  <div id="contact" class="contats center">
+    <div class="buttoncontact">
+      <div class="linkedinn">
+        <a href="www.linkedin.com/in/joserafaeltavares" target="_blank" class="linkedin btn img-responsive"> Linkedin <i class="fa fa-linkedin-square"></i></a>
       </div>
-      <div class="col-xs-4">
-        <button class="linkedin btn">GitHub<i class="fa fa-github"></i></button>
+      <div class="guithub">
+        <button class="linkedin btn img-responsive">GitHub<i class="fa fa-github"></i></button>
       </div>
-      <div class="col-xs-4">
-        <button class="linkedin btn">CodePen<i class="fa fa-codepen"></i></button>
+      <div class="codepen">
+        <button class="linkedin btn img-responsive">CodePen<i class="fa fa-codepen"></i></button>
       </div>
     </div>
   </div>
@@ -183,3 +198,4 @@ h1{
 </div>
 </body>
 </html>
+</div>
