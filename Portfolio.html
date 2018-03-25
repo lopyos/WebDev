@@ -8,7 +8,8 @@
 .start{
   background-image:url("https://images.pexels.com/photos/7106/macbook-computer-clean-hero.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
   background-repeat:no-repeat;
-  background-size:100% 50%; 
+  background-size:100% 100%;
+  background-position:center;
   
 }
 .projects{
@@ -76,8 +77,8 @@ h1{
   background-image: url("https://static.pexels.com/photos/270662/pexels-photo-270662.jpeg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding-bottom: 450px;
-  margin: 0;
+  padding-bottom: 253px;
+  padding-top:150px;
 }
 .linkedin{
   padding: 50px;
@@ -88,7 +89,7 @@ h1{
   
 }
 .buttoncontact{
-  padding-top:350px;
+  padding-top:250px;
   overflow: auto;
 }
 .fixtop{
@@ -131,11 +132,36 @@ h1{
 
 }
 @media screen and (max-width:850px ) {
+  .start, .projects,.contats{
+    background: none;
+    background-color: #393939 ;
+    padding-bottom: 50px;
+  }
+
   .linkedinn, .guithub, .codepen {
     width:100%; /* The width is 100%, when the viewport is 800px or smaller */
     margin: auto;
     text-align: center;
   }
+  .buttoncontact{
+  padding-top:150px;
+  }
+}
+h2{
+    text-align: center;
+  color: white;
+  font-family: Impact, Charcoal, sans-serif;
+  margin: auto;
+  padding-top: 100px;
+}
+footer{
+  background-color: black;
+  text-align: center;
+  color: white;
+  border:1px solid;
+  border-color: black;
+  box-shadow: 0px 0px 10px 10px black;
+  border-radius: 10px;
 }
 </style>
 <html>
@@ -147,7 +173,7 @@ h1{
         <li style="float:right"><a class="active" href="#about">About</a></li>
       </ul>
     </nav>
-  <div class="start" id="about">
+  <div class="start img-responsive" id="about">
     <div class="container">      
         <figure class="myimagef ">
           <image src="https://s14.postimg.org/62ljp7ao1/teste.jpg" class="myimage img-responsive"></image>
@@ -181,10 +207,11 @@ h1{
     </div>
   </div>
 </div>
-  <div id="contact" class="contats center">
-    <div class="buttoncontact">
+  <div id="contact" class="contats">
+      <h2>Contact </h2>
+    <div class="buttoncontact">      
       <div class="linkedinn">
-        <a href="www.linkedin.com/in/joserafaeltavares" target="_blank" class="linkedin btn img-responsive"> Linkedin <i class="fa fa-linkedin-square"></i></a>
+        <a href="www.linkedin.com/in/joserafaeltavares" target="_blank" class="linkedin btn img-responsive"> LinkedIn <i class="fa fa-linkedin-square"></i></a>
       </div>
       <div class="guithub">
         <button class="linkedin btn img-responsive">GitHub<i class="fa fa-github"></i></button>
@@ -195,7 +222,9 @@ h1{
     </div>
   </div>
 </div>
-</div>
+<footer>
+<p>Coded by Rafael Tavares for Free Code Camp</p>
+</footer>
 </body>
 </html>
 </div>
