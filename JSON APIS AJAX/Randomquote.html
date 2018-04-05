@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script>
+<script https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js></script>
+
+<script>
+  $(document).ready(function() {
+    $("#getmessage").on("click", function(){   
+      let random=Math.random();
+      Access-Control-Allow-Origin: <origin>;
+      let url= `https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=${random}`
+      $.getJSON(url, function(a) {     		
+      		$(".message").html(a[0].content + "<p>— " + a[0].title + "</p>")
+	  });
+    });
+  });
+</script>
+
+<style>
+body{
+	background-color:#ECF0F1   ;
+}
+h1{
+	text-align:center;
+	color:black;
+	padding-top: 150px;
+}
+.bodybox{
+	background-color:#D0D3D4   ; 
+	margin:10%;
+	border-radius: 10px;
+	text-align: center;
+	border:solid 1px;
+	border-color: black;
+	position: center;
+}
+.qbutton{
+	text-align: center;
+	margin-top: 100px;
+
+}
+
+.message{
+  margin:10px;
+  padding-top:50px;
+}
+</style>
+
+<html lang="en-US">
+	<body class="center">
+		<div class="bodybox">
+			<head>
+				<h1>
+					Random Quote Machine
+				</h1>					
+			</head>
+			<div class="container-fluid">
+						<button class ="qbutton btn btn-outline-dark" id="getmessage">Press For Quotation</button>
+			</div>
+			<div>
+				<div class="message">Here is the message</div>
+			</div>
+		</div>	
+	</body>
+</html>
