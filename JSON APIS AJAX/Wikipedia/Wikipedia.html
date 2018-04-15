@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+<html>
+  <head>
+    <style>
+    body{
+      background-color:#FFFFFF;
+    }
+    .searchresult{
+      border:solid 1px;
+      padding:1%;
+      margin:1%;
+      color:#8B8B8B;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    h1{
+      text-align:center;
+      font-family:New Century Schoolbook;
+      color:#8B8B8B;
+    }
+    input[type=text] {
+        width: 130px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+    .bar{
+     text-align:center; 
+    }
+    input[type=text]:focus {
+        width: 35%;
+    }
+    </style>
+  </head>
+    <body>
+      <header>
+        <h1 id="sud">Press me and search your dream on WIkipedia</h1>
+      </header>
+      <section>
+        <div class="container-fluid bar">
+         <input type="text" name="search" placeholder="Search..">
+          <button id="random" class="btn" >random</button>
+        </div>         
+      </section>
+      <div class="content"></div>
+      <script
+          src="http://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous">
+      </script>
+      <script>
+      $(document).ready(function(){
+        $("section").hide();
+        $("h1").css("margin-top","350px");
+        let l=0;
+        $("#sud").on("click",function(){
+          if(l<1){
+          $("#sud").animate({marginTop: "-=250px"});   
+          }
+          l++;   
+        $("section").fadeIn("slow");
+        });
+      });
+
+      $(document).keypress(function(e) {
+          if(e.which == 13) {
+              let search= $("input").val();
+              let url=`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${search}&format=json&callback=?`
+              let title=[];
+              let snippet=[];
+              let pageid=[];
+              let urll=[];
+                  $.getJSON(url,function(data){
+                    let html="";  
+                    let urll;
+                      for(i=0;i<data.query.search.length;i++){
+                        let val = data.query.search[i];
+                        title[i]=val.title;
+                        snippet[i]=val.snippet;
+                        pageid[i]=val.pageid;
+                        urll=`https://en.wikipedia.org/?curid=${val.pageid}`;
+                        html += `<a href=${urll} target='_blank'>` ;
+                        html += "<div class = 'searchresult'>";
+                        html += val.title;
+                        html+='<br />';
+                        html += val.snippet;
+                        html += "</div>"; 
+                        html+= "</a>";
+                      $(".content").html(html).fadeIn();
+                      $('.content').addClass('animated bounceInUp');
+                    } 
+                });
+          }
+        });
+          let urlrandom=`https://en.wikipedia.org/wiki/Special:Random`;
+            $("#random").on('click', function(){
+                 window.open(`https://en.wikipedia.org/wiki/Special:Random`);
+              
+      });
+      </script>
+    </body>
+</html>
